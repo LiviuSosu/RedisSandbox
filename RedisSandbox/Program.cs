@@ -1,7 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
 
 builder.Services.AddDistributedRedisCache(option =>
@@ -11,8 +9,6 @@ builder.Services.AddDistributedRedisCache(option =>
 });
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 
 app.UseAuthorization();
 
