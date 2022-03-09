@@ -1,6 +1,3 @@
-using Microsoft.Extensions.Caching.Distributed;
-using StackExchange.Redis;
-
 namespace RedisSandbox.Controllers
 {
     [ApiController]
