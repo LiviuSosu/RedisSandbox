@@ -19,17 +19,17 @@ namespace RedisSandbox.Controllers
                 //https://www.youtube.com/watch?v=188Fy-oCw4w&ab_channel=ProgrammingKnowledge2
                 //C:\Program Files\Redis
                 //https://github.com/microsoftarchive/redis/releases
-                var cacheKey = "MyRedisKEy";
+                var cacheKey = "MyRedisKey";
                 var existingTime = _distributedCache.GetString(cacheKey);
                 if (!string.IsNullOrEmpty(existingTime))
                 {
-                    var x = "Fetched from cache : " + existingTime;
+                    var redisKeyToGet = "Fetched from cache : " + existingTime;
                 }
                 else
                 {
                     existingTime = "\"cevafffff\"";
                     _distributedCache.SetString(cacheKey, existingTime);
-                    var y = "Added to cache : " + existingTime;
+                    var redisKeyToAdd = "Added to cache : " + existingTime;
                 }
             }
             catch (RedisConnectionException ex)
